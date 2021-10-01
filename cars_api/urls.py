@@ -20,5 +20,5 @@ import cars
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cars/v1/api', include('cars.urls'))
+    path('api/v1/cars/', include('cars.urls'))
 ]
