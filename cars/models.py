@@ -5,7 +5,7 @@ User = get_user_model()
 
 
 class Car(models.Model):
-    vin = models.CharField(max_length=64)
+    vin = models.CharField(max_length=64, unique=True)
     color = models.CharField(max_length=64)
     brand = models.CharField(max_length=64)
     CAR_TYPES = (
