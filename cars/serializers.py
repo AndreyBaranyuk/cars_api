@@ -3,7 +3,7 @@ from .models import Car
 
 
 class CarDetailSerializer(serializers.ModelSerializer):
-    user = serializers.HiddenField(default=serializers.CurrentUserDefault)
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     class Meta:
         model = Car

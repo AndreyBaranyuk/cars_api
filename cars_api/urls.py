@@ -20,5 +20,6 @@ import cars
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/cars/', include('cars.urls'))
+    path('api/v1/cars/', include('cars.urls')),
+    path('api/v1/auth/', include('rest_framework.urls'))
 ]

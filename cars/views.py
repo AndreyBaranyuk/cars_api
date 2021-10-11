@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .serializers import CarDetailSerializer, CarsListSerializer
 from .models import Car
+from .permissions import IsOwnerOrReadOnly
 
 
 class CarCreateView(generics.CreateAPIView):
@@ -16,3 +17,4 @@ class CarsListView(generics.ListAPIView):
 class CarDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CarDetailSerializer
     queryset = Car.objects.all()
+    permission_classes = (IsOwnerOrReadOnly, )
